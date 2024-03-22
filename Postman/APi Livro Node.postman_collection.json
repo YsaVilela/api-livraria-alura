@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "bd05473a-50f0-4a93-a51d-a48ab59360df",
+		"name": "APi Livro Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29072219"
+	},
+	"item": [
+		{
+			"name": "Livros",
+			"item": [
+				{
+					"name": "Listar Livros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/livros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Livro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"titulo\": \"Robbit\",\r\n        \"editora\": \"Editora C\",\r\n        \"preco\": 50,\r\n        \"paginas\": 4500,\r\n        \"autor\": \"65fdca645dd0db689b441234\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/livros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Livro Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/livros/65fdc339414521a524d600f2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros",
+								"65fdc339414521a524d600f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Livro Por Editora",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/livros/busca?editora=Editora A",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros",
+								"busca"
+							],
+							"query": [
+								{
+									"key": "editora",
+									"value": "Editora A"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Livro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"titulo\": \"Senhor dos Aneis\",\r\n        \"editora\": \"Editora E\",\r\n        \"preco\": 50\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/livros/65fdc14edc40c5373158e092",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros",
+								"65fdc14edc40c5373158e092"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Livro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Robbit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/livros/65fdc14edc40c5373158e092",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros",
+								"65fdc14edc40c5373158e092"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "Listar Autores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/autores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar autor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Guilherme\",\r\n    \"nacionalidade\": \"autriaco\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/autores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Autor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/autores/65fdca645dd0db689b441234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"autores",
+								"65fdca645dd0db689b441234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Autor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Ysadora\",\r\n    \"nacionalidade\": \"brasileiro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/autores/65fdca645dd0db689b441234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"autores",
+								"65fdca645dd0db689b441234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Autor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Robbit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/autores/65fdc14edc40c5373158e092",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"autores",
+								"65fdc14edc40c5373158e092"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
